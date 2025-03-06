@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="updating.css">
     <title>Fundamentals of IT Quiz</title>
-    <style>
-        /* CSS will be added below */
-    </style>
-    <script src="script.js" defer></script>
+    <script src="up.js" defer></script>
 </head>
 <body>
-    <div id="quizContainer">
+    
+
+    <div id="instituteDetails">
+        <h1>Sensorstech Computer Institute</h1>
+        <p><strong>Founder:</strong> Anand Kumar Sharma</p>
+        <p><strong>Teacher:</strong> Priyanshu Ben</p>
+        <p><strong>Address:</strong> Beside Scholar's Valley School, Newada, BLW RD.</p>
+    </div>
+
+
+
+    <div id="studentFormContainer">
+        <h2>Student Details</h2>
+        <form id="studentForm">
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName" required>
+            
+            <label for="studentEmail">Email:</label>
+            <input type="email" id="studentEmail" required>
+            
+            <button type="submit">Start Quiz</button>
+        </form>
+    </div>
+
+    <div id="quizContainer" style="display: none;">
         <h2>Fundamentals of IT Quiz</h2>
         <div id="timer">Time Left: 60:00</div>
         <form id="quizForm">
-            <!-- Questions go here (same as before) -->
-
+           
                 <div class="question">
             <p>1. UNIVAC is:</p>
             <div class="options">
@@ -414,14 +434,13 @@
                 <label><input type="radio" name="q40" value="D"> D) None of above</label>
             </div>
         </div>
-
             <button type="button" id="submit">Submit</button>
         </form>
     </div>
 
-    <!-- Result Interface -->
     <div id="resultContainer" style="display: none;">
         <h2>Quiz Results</h2>
+        <p id="studentDetails"></p>
         <p id="resultText"></p>
         <button id="retryButton">Retry Quiz</button>
     </div>
